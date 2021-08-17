@@ -1,0 +1,4 @@
+*.xcuserdatad
+xcuserdata/
+GameStream.xcodeproj/project.xcworkspace/xcuserdata
+GameStream.xcodeproj/xcshareddata
