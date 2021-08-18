@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isSignInActive: Bool = true
+    @State var isSignInActive: Bool = false
     
     var body: some View {
         ZStack {

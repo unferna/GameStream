@@ -84,6 +84,7 @@ struct LoginView: View {
                 
                 VStack {
                     Text("Inicia sesión con redes sociales")
+                        .font(.caption)
                         .foregroundColor(.white)
                         .padding(.bottom, 8)
                     
