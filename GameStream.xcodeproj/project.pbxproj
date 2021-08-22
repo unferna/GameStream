@@ -15,6 +15,7 @@
 		A860D66626C8207900E431F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A860D66526C8207900E431F4 /* Preview Assets.xcassets */; };
 		A860D67126C8207A00E431F4 /* GameStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860D67026C8207A00E431F4 /* GameStreamTests.swift */; };
 		A860D67C26C8207A00E431F4 /* GameStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860D67B26C8207A00E431F4 /* GameStreamUITests.swift */; };
+		A89F896726CD6BA1006D6C61 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F896626CD6BA1006D6C61 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A860D67726C8207A00E431F4 /* GameStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A860D67B26C8207A00E431F4 /* GameStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStreamUITests.swift; sourceTree = "<group>"; };
 		A860D67D26C8207A00E431F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A89F896626CD6BA1006D6C61 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				A860D65E26C8207700E431F4 /* GameStreamApp.swift */,
 				A860D66026C8207700E431F4 /* ContentView.swift */,
+				A89F896626CD6BA1006D6C61 /* Home.swift */,
 				A809F4DD26CB3CC600237C30 /* CreateAccountView.swift */,
 				A809F4DB26CB3CA100237C30 /* LoginView.swift */,
 				A860D66226C8207900E431F4 /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */,
 				A860D66126C8207700E431F4 /* ContentView.swift in Sources */,
+				A89F896726CD6BA1006D6C61 /* Home.swift in Sources */,
 				A809F4DE26CB3CC600237C30 /* CreateAccountView.swift in Sources */,
 				A860D65F26C8207700E431F4 /* GameStreamApp.swift in Sources */,
 			);

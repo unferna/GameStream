@@ -10,48 +10,14 @@ import SwiftUI
 struct LoginView: View {
     @State var emailTextField: String = ""
     @State var passwordTextField: String = ""
+    @State var isHomeActive: Bool = false
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Correo Electronico")
-                    .foregroundColor(Color("darkCian"))
-                    .fontWeight(.bold)
+                InputForm(textBinding: $emailTextField, label: "Correo Electronico", placeholder: "example@mailcom")
                 
-                ZStack(alignment: .leading) {
-                    if emailTextField.isEmpty {
-                        Text("example@gmail.com")
-                            .font(.caption)
-                            .foregroundColor(Color("lightGray"))
-                    }
-                    
-                    
-                    TextField("", text: $emailTextField)
-                }
-                
-                Divider()
-                    .frame(height: 1)
-                    .background(Color("darkCian"))
-                    .padding(.bottom)
-                
-                Text("Contraseña")
-                    .foregroundColor(Color("darkCian"))
-                    .fontWeight(.bold)
-                
-                ZStack(alignment: .leading) {
-                    if passwordTextField.isEmpty {
-                        Text("Escribe tu contraseña")
-                            .font(.caption)
-                            .foregroundColor(Color("lightGray"))
-                    }
-                    
-                    
-                    SecureField("", text: $passwordTextField)
-                }
-                
-                Divider()
-                    .frame(height: 1)
-                    .background(Color("darkCian"))
+                InputForm(textBinding: $passwordTextField, label: "Contraseña", placeholder: "Escribe tu contraseña", isSecureTextField: true, bottomSpace: 0)
                 
                 HStack {
                     Spacer()
@@ -106,11 +72,19 @@ struct LoginView: View {
                 }   
             }
             .padding(.horizontal, 32)
+            
+            // Navigation
+            NavigationLink(
+                destination: Home(),
+                isActive: $isHomeActive,
+                label: { EmptyView() }
+            )
         }
     }
     
     func login() {
         print("Did tap login")
+        isHomeActive = true
     }
 }
 
