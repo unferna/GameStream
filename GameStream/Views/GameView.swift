@@ -13,6 +13,8 @@ struct GameView: View {
     var game: Game!
     let galleryGrid = [GridItem(.flexible())]
     
+    let commentsString: [String] = []
+    
     var body: some View {
         ZStack {
             Color("mainFill").ignoresSafeArea()
@@ -116,11 +118,7 @@ struct GameView_Previews: PreviewProvider {
             platforms: [],
             tags: ["Plataformas", "Mascota"],
             videosUrls: VideoUrl(mobile: "Ejemplo.com", tablet: ""),
-            galleryImages: [
-                "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
-                "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
-                "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg"
-            ]
+            galleryImages: []
         )
         
         GameView(game: exampleGame)
