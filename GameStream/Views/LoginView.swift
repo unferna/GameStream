@@ -69,7 +69,8 @@ struct LoginView: View {
                             .background(Color("blueGray"))
                             .cornerRadius(8)
                     }
-                }   
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, 32)
             
