@@ -20,6 +20,7 @@
 		A87565B826D2CAF500D5CBAF /* VideoUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87565B726D2CAF500D5CBAF /* VideoUrl.swift */; };
 		A87565BA26D2CC0600D5CBAF /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87565B926D2CC0600D5CBAF /* GamesViewModel.swift */; };
 		A87565BD26D2F7D700D5CBAF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A87565BC26D2F7D700D5CBAF /* Kingfisher */; };
+		A87565BF26D2FA2900D5CBAF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87565BE26D2FA2900D5CBAF /* GameView.swift */; };
 		A89F896726CD6BA1006D6C61 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F896626CD6BA1006D6C61 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		A87565B526D2C9D400D5CBAF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A87565B726D2CAF500D5CBAF /* VideoUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUrl.swift; sourceTree = "<group>"; };
 		A87565B926D2CC0600D5CBAF /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
+		A87565BE26D2FA2900D5CBAF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		A89F896626CD6BA1006D6C61 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 		A87565B126D2C89600D5CBAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A87565BE26D2FA2900D5CBAF /* GameView.swift */,
 				A860D66026C8207700E431F4 /* ContentView.swift */,
 				A89F896626CD6BA1006D6C61 /* Home.swift */,
 				A87565AF26D2C7A100D5CBAF /* GamesView.swift */,
@@ -316,6 +319,7 @@
 				A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */,
 				A87565BA26D2CC0600D5CBAF /* GamesViewModel.swift in Sources */,
 				A87565B626D2C9D400D5CBAF /* Game.swift in Sources */,
+				A87565BF26D2FA2900D5CBAF /* GameView.swift in Sources */,
 				A87565B826D2CAF500D5CBAF /* VideoUrl.swift in Sources */,
 				A860D66126C8207700E431F4 /* ContentView.swift in Sources */,
 				A89F896726CD6BA1006D6C61 /* Home.swift in Sources */,

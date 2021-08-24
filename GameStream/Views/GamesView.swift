@@ -11,6 +11,7 @@ import Kingfisher
 struct GamesView: View {
     @ObservedObject var gamesViewModel = GamesViewModel()
     @State var gameViewIsActive: Bool = false
+    @State var selectedGame: Game!
     
     let grid = [
         GridItem(.flexible()),
@@ -31,7 +32,11 @@ struct GamesView: View {
                 ScrollView {
                     LazyVGrid(columns: grid, spacing: 8) {
                         ForEach(gamesViewModel.gamesInfo, id: \.self) { game in
-                            Button(action: {}) {
+                            Button(action: {
+                                selectedGame = game
+                                gameViewIsActive = true
+                                
+                            }) {
                                 KFImage( URL(string: game.galleryImages.first! ))
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -43,6 +48,12 @@ struct GamesView: View {
                 }
             }
             .padding(.horizontal, 16)
+            
+            NavigationLink(
+                destination: GameView(game: selectedGame),
+                isActive: $gameViewIsActive,
+                label: { EmptyView() }
+            )
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
