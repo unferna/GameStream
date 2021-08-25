@@ -11,6 +11,9 @@ struct CreateAccountView: View {
     @State var emailTextField: String = ""
     @State var passwordTextField: String = ""
     @State var passwordConfirmTextField: String = ""
+    @State var cantRegister: Bool = false
+    @State var alertErrorMessage: String = ""
+    @State var isHomeActive = false
     
     var body: some View {
         ScrollView {
@@ -39,13 +42,13 @@ struct CreateAccountView: View {
             }
             
             VStack(alignment: .leading) {
-                InputForm(textBinding: $emailTextField, label: "Correo Electronico", placeholder: "example@mailcom")
+                InputForm(textBinding: $emailTextField, label: "Correo Electronico", placeholder: "example@mail.com")
                 
                 InputForm(textBinding: $passwordTextField, label: "Contraseña", placeholder: "Escribe tu contraseña", isSecureTextField: true)
                 
                 InputForm(textBinding: $passwordConfirmTextField, label: "Confirmar Contraseña", placeholder: "Vuelve a escribir tu contraseña", isSecureTextField: true, bottomSpace: 32)
                 
-                Button(action: {}) {
+                Button(action: register) {
                     VStack {
                         Text("Regístrate".uppercased())
                             .foregroundColor(.white)
@@ -61,6 +64,13 @@ struct CreateAccountView: View {
                     )
                 }
                 .padding(.bottom, 30)
+                .alert(isPresented: $cantRegister) {
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(alertErrorMessage),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
                 
                 VStack {
                     Text("Regístrate con redes sociales")
@@ -84,8 +94,43 @@ struct CreateAccountView: View {
                             .cornerRadius(8)
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, 32)
+            
+            // Navigation
+            NavigationLink(
+                destination: Home(),
+                isActive: $isHomeActive,
+                label: { EmptyView() }
+            )
+        }
+    }
+    
+    private func register() {
+        if emailTextField.isEmpty {
+            alertErrorMessage = "Correo es requerido!"
+            cantRegister = true
+            
+        } else if passwordTextField.isEmpty {
+            alertErrorMessage = "Contraseña es requerida!"
+            cantRegister = true
+            
+        } else if passwordConfirmTextField.isEmpty {
+            alertErrorMessage = "Confirma tu contraseña!"
+            cantRegister = true
+            
+        } else if passwordTextField != passwordConfirmTextField {
+            alertErrorMessage = "Contraseñas no coinciden"
+            cantRegister = true
+        
+        } else {
+            alertErrorMessage = ""
+            cantRegister = false
+            
+            if LocalStorage.shared.saveData(email: emailTextField, password: passwordConfirmTextField, name: "") {
+                isHomeActive = true
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ struct Home: View {
     
     var body: some View {
         TabView(selection: $selectedView) {
-            Text("Perfil")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Perfil")

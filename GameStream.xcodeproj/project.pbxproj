@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8096DE326D6E53600DE5ABF /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8096DE226D6E53600DE5ABF /* LocalStorage.swift */; };
 		A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809F4DB26CB3CA100237C30 /* LoginView.swift */; };
 		A809F4DE26CB3CC600237C30 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809F4DD26CB3CC600237C30 /* CreateAccountView.swift */; };
 		A81E52EE26D54EAE000D36F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E52ED26D54EAE000D36F3 /* HomeViewModel.swift */; };
@@ -24,6 +25,7 @@
 		A87565BF26D2FA2900D5CBAF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87565BE26D2FA2900D5CBAF /* GameView.swift */; };
 		A89C12BE26D5B3BE00BEA97B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C12BD26D5B3BE00BEA97B /* FavoritesView.swift */; };
 		A89C12C026D5B64F00BEA97B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C12BF26D5B64F00BEA97B /* ProfileView.swift */; };
+		A89C12C226D5DE8600BEA97B /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C12C126D5DE8600BEA97B /* EditProfileView.swift */; };
 		A89F896726CD6BA1006D6C61 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F896626CD6BA1006D6C61 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8096DE226D6E53600DE5ABF /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		A809F4DB26CB3CA100237C30 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A809F4DD26CB3CC600237C30 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		A81E52ED26D54EAE000D36F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		A87565BE26D2FA2900D5CBAF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		A89C12BD26D5B3BE00BEA97B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A89C12BF26D5B64F00BEA97B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A89C12C126D5DE8600BEA97B /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		A89F896626CD6BA1006D6C61 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,7 @@
 				A809F4DB26CB3CA100237C30 /* LoginView.swift */,
 				A89C12BD26D5B3BE00BEA97B /* FavoritesView.swift */,
 				A89C12BF26D5B64F00BEA97B /* ProfileView.swift */,
+				A89C12C126D5DE8600BEA97B /* EditProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			children = (
 				A87565B926D2CC0600D5CBAF /* GamesViewModel.swift */,
 				A81E52ED26D54EAE000D36F3 /* HomeViewModel.swift */,
+				A8096DE226D6E53600DE5ABF /* LocalStorage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -324,11 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89C12C226D5DE8600BEA97B /* EditProfileView.swift in Sources */,
 				A87565B026D2C7A100D5CBAF /* GamesView.swift in Sources */,
 				A89C12C026D5B64F00BEA97B /* ProfileView.swift in Sources */,
 				A81E52EE26D54EAE000D36F3 /* HomeViewModel.swift in Sources */,
 				A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */,
 				A87565BA26D2CC0600D5CBAF /* GamesViewModel.swift in Sources */,
+				A8096DE326D6E53600DE5ABF /* LocalStorage.swift in Sources */,
 				A87565B626D2C9D400D5CBAF /* Game.swift in Sources */,
 				A87565BF26D2FA2900D5CBAF /* GameView.swift in Sources */,
 				A87565B826D2CAF500D5CBAF /* VideoUrl.swift in Sources */,
