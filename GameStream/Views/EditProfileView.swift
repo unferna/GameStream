@@ -12,6 +12,9 @@ struct EditProfileView: View {
     @State var passwordTextField = ""
     @State var nameTextField = ""
     
+    @State var takenPicture: Image? = Image("profilePlaceholder")
+    @State var isCameraViewActive: Bool = false
+    
     var body: some View {
         ZStack {
             Color("mainFill").ignoresSafeArea()
@@ -23,12 +26,18 @@ struct EditProfileView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        isCameraViewActive = true
+                    }) {
                         ZStack {
-                            Image("profilePlaceholder")
+                            takenPicture?
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
                                 .frame(width: 100, height: 100)
+                                .clipShape(Circle())
+                                .sheet(isPresented: $isCameraViewActive) {
+                                    SUImagePickerView(sourceType: .camera, image: $takenPicture, isPresented: $isCameraViewActive)
+                                }
                             
                             Image(systemName: "camera")
                                 .font(.system(size: 24))
@@ -71,12 +80,26 @@ struct EditProfileView: View {
                 passwordTextField = data.password
                 nameTextField = data.name
             }
+            
+            if let picture = loadImage(named: "ProfilePhoto") {
+                takenPicture = Image(uiImage: picture)
+            
+            } else {
+                takenPicture = Image("profilePlaceholder")
+            }
         }
     }
     
     private func updateData() {
-        if LocalStorage.shared.saveData(email: emailTextField, password: passwordTextField, name: nameTextField) {
+        _ = LocalStorage.shared.saveData(email: emailTextField, password: passwordTextField, name: nameTextField)
+    }
+    
+    func loadImage(named: String) -> UIImage? {
+        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(named).path)
         }
+        
+        return nil
     }
 }
 

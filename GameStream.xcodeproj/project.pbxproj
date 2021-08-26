@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8096DE326D6E53600DE5ABF /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8096DE226D6E53600DE5ABF /* LocalStorage.swift */; };
+		A8096DE726D7049200DE5ABF /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8096DE626D7049200DE5ABF /* SUImagePickerView.swift */; };
 		A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809F4DB26CB3CA100237C30 /* LoginView.swift */; };
 		A809F4DE26CB3CC600237C30 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809F4DD26CB3CC600237C30 /* CreateAccountView.swift */; };
 		A81E52EE26D54EAE000D36F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E52ED26D54EAE000D36F3 /* HomeViewModel.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		A8096DE226D6E53600DE5ABF /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		A8096DE626D7049200DE5ABF /* SUImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		A809F4DB26CB3CA100237C30 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A809F4DD26CB3CC600237C30 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		A81E52ED26D54EAE000D36F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				A860D66226C8207900E431F4 /* Assets.xcassets */,
 				A860D66726C8207900E431F4 /* Info.plist */,
 				A860D66426C8207900E431F4 /* Preview Content */,
+				A8096DE626D7049200DE5ABF /* SUImagePickerView.swift */,
 			);
 			path = GameStream;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				A81E52EE26D54EAE000D36F3 /* HomeViewModel.swift in Sources */,
 				A809F4DC26CB3CA100237C30 /* LoginView.swift in Sources */,
 				A87565BA26D2CC0600D5CBAF /* GamesViewModel.swift in Sources */,
+				A8096DE726D7049200DE5ABF /* SUImagePickerView.swift in Sources */,
 				A8096DE326D6E53600DE5ABF /* LocalStorage.swift in Sources */,
 				A87565B626D2C9D400D5CBAF /* Game.swift in Sources */,
 				A87565BF26D2FA2900D5CBAF /* GameView.swift in Sources */,

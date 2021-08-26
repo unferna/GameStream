@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var username = "John Doe"
+    @State var profileImage: UIImage = UIImage(named: "profilePlaceholder")!
     
     var body: some View {
         ZStack {
@@ -23,13 +24,17 @@ struct ProfileView: View {
                 VStack {
                     Button(action: {}) {
                         ZStack {
-                            Image("profilePlaceholder")
+                            Image(uiImage: profileImage)
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
                                 .frame(width: 118, height: 118)
                                 .clipShape(Circle())
                         }
                     }
+                    
+                    Text(username)
+                        .font(.callout)
+                        .foregroundColor(.white)
                 }
                 .padding(.top, 64)
                 .padding(.bottom, 32)
@@ -46,7 +51,26 @@ struct ProfileView: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-        .onAppear() {}
+        .onAppear() {
+            if let data = LocalStorage.shared.getData() {
+                username = data.name
+            }
+            
+            if let picture = loadImage(named: "ProfilePhoto") {
+                profileImage = picture
+            
+            } else {
+                profileImage = UIImage(named: "profilePlaceholder")!
+            }
+        }
+    }
+    
+    func loadImage(named: String) -> UIImage? {
+        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(named).path)
+        }
+        
+        return nil
     }
 }
 

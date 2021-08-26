@@ -81,6 +81,12 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, 32)
+            .onAppear() {
+                if let data = LocalStorage.shared.getData() {
+                    emailTextField = data.email
+                    passwordTextField = data.password
+                }
+            }
             
             // Navigation
             NavigationLink(
