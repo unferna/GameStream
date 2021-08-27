@@ -95,6 +95,8 @@ struct SubmoduleHome: View {
         "Hades"
     ]
     
+    let device = UIDevice.current.model
+    
     var body: some View {
         VStack {
             HStack {
@@ -168,17 +170,24 @@ struct SubmoduleHome: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(Color("blueGray"))
-                                .frame(width: 160, height: 90)
+                                .frame(
+                                    width: device == "iPad" ? 320 : 160,
+                                    height: device == "iPad" ? 180 : 90
+                                )
                             
                             VStack {
                                 Image("imgIconFPS")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 42, height: 42)
+                                    .frame(
+                                        width: device == "iPad" ? 84 : 42,
+                                        height: device == "iPad" ? 84 : 42
+                                    )
                                 
                                 Text("FPS")
                                     .bold()
                                     .foregroundColor(Color("cian"))
+                                    .font(.system(size: device == "iPad" ? 30 : 16))
                             }
                         }
                     }
@@ -187,17 +196,24 @@ struct SubmoduleHome: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(Color("blueGray"))
-                                .frame(width: 160, height: 90)
+                                .frame(
+                                    width: device == "iPad" ? 320 : 160,
+                                    height: device == "iPad" ? 180 : 90
+                                )
                             
                             VStack {
                                 Image("imgIconRPG")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 42, height: 42)
+                                    .frame(
+                                        width: device == "iPad" ? 84 : 42,
+                                        height: device == "iPad" ? 84 : 42
+                                    )
                                 
                                 Text("RPG")
                                     .bold()
                                     .foregroundColor(Color("cian"))
+                                    .font(.system(size: device == "iPad" ? 30 : 16))
                             }
                         }
                     }
@@ -206,17 +222,24 @@ struct SubmoduleHome: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(Color("blueGray"))
-                                .frame(width: 160, height: 90)
+                                .frame(
+                                    width: device == "iPad" ? 320 : 160,
+                                    height: device == "iPad" ? 180 : 90
+                                )
                             
                             VStack {
                                 Image("imgIconOpenWorld")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 42, height: 42)
+                                    .frame(
+                                        width: device == "iPad" ? 84 : 42,
+                                        height: device == "iPad" ? 84 : 42
+                                    )
                                 
                                 Text("Open World")
                                     .bold()
                                     .foregroundColor(Color("cian"))
+                                    .font(.system(size: device == "iPad" ? 30 : 16))
                             }
                         }
                     }

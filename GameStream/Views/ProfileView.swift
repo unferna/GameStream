@@ -63,6 +63,9 @@ struct ProfileView: View {
                 profileImage = UIImage(named: "profilePlaceholder")!
             }
         }
+        .onDisappear() {
+            
+        }
     }
     
     func loadImage(named: String) -> UIImage? {

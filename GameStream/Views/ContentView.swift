@@ -22,6 +22,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 250)
                         .padding(.bottom)
+                        .offset(x: 0, y: 15)
                     
                     HStack(spacing: 50) {
                         Button(action: {
@@ -63,5 +64,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPad Pro (11-inch) (3rd generation)")
     }
 }
